@@ -12,7 +12,7 @@
 //Aggiungere a fianco ad ogni elemento della lista un pulsante “elimina”: 
 //quando l’utente clicca su uno di questi pulsanti, 
 //l’elemento corrispondente viene rimosso dalla lista.
-
+`backticks`
 
 //DEFINIZIONE ARRAY
 let listaDellaSpesa = ["farina", "uova", "latte", "zucchero", "burro",];
@@ -30,3 +30,12 @@ while (contatore < listaDellaSpesa.length) {
     console.log((contatore + 1) + ". " + listaDellaSpesa[contatore]);
     contatore++;
 }
+
+//STAMPA A SCHERMO CON CICLO FOR
+console.log("STAMPA A SCHERMO CON CICLO FOR")
+for (let i = 0; i < listaDellaSpesa.length; i++) {
+
+    document.getElementById("lista-della-spesa-displayed").innerHTML+=`<li>${listaDellaSpesa[i]} </li>`    
+    console.log((i + 1) + ". " + listaDellaSpesa[i]);
+}
+
