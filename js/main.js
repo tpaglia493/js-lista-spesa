@@ -24,11 +24,12 @@ for (let i = 0; i < listaDellaSpesa.length; i++) {
     document.getElementById("lista-della-spesa-displayed").innerHTML+=`<li>${listaDellaSpesa[i]} </li>`;
 };
 
-//STAMPA A CONSOLE CON CICLO WHILE
+//STAMPA A SCHERMO E CONSOLE CON CICLO WHILE
 console.log("STAMPA A CONSOLE CON CICLO WHILE")
 let contatore = 0;
 while (contatore < listaDellaSpesa.length) {
     console.log((contatore + 1) + ". " + listaDellaSpesa[contatore]);
+    document.getElementById("lista-della-spesa-displayed").innerHTML+=`<li>${listaDellaSpesa[contatore]} </li>`;
     contatore++;
 };
 
