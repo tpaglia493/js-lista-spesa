@@ -1,27 +1,12 @@
-//Data una lista della spesa, stampare in console gli elementi della lista individualmente, 
-//prima con un ciclo for, poi con un ciclo while.
-//Quando le stampe in console sono corrette, stampare gli elementi in un elenco puntato,
-//utilizzando uno dei due cicli scritti al punto precedente.
-
-//Bonus:
-//Aggiungere alla pagina HTML un campo di input testuale e un pulsante “aggiungi”: 
-//l’utente inserisce nell’input un prodotto da acquistare e quando clicca sul pulsante, 
-//il testo viene aggiunto alla lista.
-
-//Super Bonus:
-//Aggiungere a fianco ad ogni elemento della lista un pulsante “elimina”: 
-//quando l’utente clicca su uno di questi pulsanti, 
-//l’elemento corrispondente viene rimosso dalla lista.
-`backticks`
-
 //DEFINIZIONE DELL'ARRAY
 let listaDellaSpesa = ["farina", "uova", "latte", "zucchero", "burro",];
 
-//STAMPA A SCHERMO E CONSOLE CON CICLO FOR
+//STAMPA A SCHERMO E CONSOLE DELL'ARRAY CON CICLO FOR
 console.log("STAMPA A CONSOLE CON CICLO FOR")
 for (let i = 0; i < listaDellaSpesa.length; i++) {
     console.log((i + 1) + ". " + listaDellaSpesa[i]);
-    document.getElementById("lista-della-spesa-displayed").innerHTML += `<li>${listaDellaSpesa[i]} </li>`;
+    document.getElementById("lista-della-spesa-displayed").innerHTML += 
+    `<li>${listaDellaSpesa[i]}  <button id="bottone-rimuovi-dalla-lista">Rimuovi dalla lista</button></li>`;
 };
 
 //STAMPA A SCHERMO E CONSOLE CON CICLO WHILE
@@ -52,14 +37,24 @@ function aggiungiAllaLista() {
     //controllo che l'array abbia il nuovo elemento
     console.log(listaDellaSpesa);
 
-    //STAMPA A SCHERMO DELL'ELEMENTO (LUNGHEZZA meno 1) DELL'ARRAY
-    document.getElementById("lista-della-spesa-displayed").innerHTML += `<li>${listaDellaSpesa[(listaDellaSpesa.length - 1)]} </li>`;
+    //STAMPA A SCHERMO DELL'ULTIMO ELEMENTO (LUNGHEZZA meno 1) DELL'ARRAY
+    document.getElementById("lista-della-spesa-displayed").innerHTML += 
+    `<li>${listaDellaSpesa[(listaDellaSpesa.length - 1)]} <button id="bottone-rimuovi-dalla-lista">Rimuovi dalla lista</button></li>`;
 
 };
 
 //COLLEGAMENTO DEL BOTTONE ALLA FUNZIONE TRAMITE addEventListener("click", funzione)
 document.getElementById("bottone-aggiungi-alla-lista").addEventListener("click", aggiungiAllaLista);
 
+//DEFINIZIONE DELLA FUNZIONE PER RIMUOVERE IL VALORE DALLA LISTA SE IL BOTTONE VIENE CLICKATO
 
+function rimuoviDallaLista(){
+    listaDellaSpesa.splice(i,1)
+};
+
+document.getElementById("rimuovi-dalla-lista").addEventListener("click", rimuoviDallaLista);
+
+
+//TODO provare ad aggiungere un contatore al bottone per eliminare l'elemento dalla lista
 
 
