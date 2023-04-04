@@ -49,12 +49,14 @@ document.getElementById("bottone-aggiungi-alla-lista").addEventListener("click",
 //DEFINIZIONE DELLA FUNZIONE PER RIMUOVERE IL VALORE DALLA LISTA SE IL BOTTONE VIENE CLICKATO
 
 function rimuoviDallaLista(){
-    listaDellaSpesa.splice(i,1)
+    listaDellaSpesa.splice(1,1);
+    console.log(listaDellaSpesa);
 };
 
-document.getElementById("rimuovi-dalla-lista").addEventListener("click", rimuoviDallaLista);
+document.getElementById("bottone-rimuovi-dalla-lista").addEventListener("click", rimuoviDallaLista);
 
 
-//TODO provare ad aggiungere un contatore al bottone per eliminare l'elemento dalla lista
+
+
 
 
