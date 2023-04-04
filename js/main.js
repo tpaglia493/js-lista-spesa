@@ -15,9 +15,18 @@
 
 
 //DEFINIZIONE ARRAY
-let listaDellaSpesa=["farina", "uova", "latte", "zucchero","burro",]
+let listaDellaSpesa = ["farina", "uova", "latte", "zucchero", "burro",];
 
 //STAMPA A CONSOLE CON CICLO FOR
-for(let i=0; i<listaDellaSpesa.length; i++){
-    console.log((i+1)+". " + listaDellaSpesa[i] )
+console.log("STAMPA A CONSOLE CON CICLO FOR")
+for (let i = 0; i < listaDellaSpesa.length; i++) {
+    console.log((i + 1) + ". " + listaDellaSpesa[i]);
+}
+
+//STAMPA A CONSOLE CON CICLO WHILE
+console.log("STAMPA A CONSOLE CON CICLO WHILE")
+let contatore = 0;
+while (contatore < listaDellaSpesa.length) {
+    console.log((contatore + 1) + ". " + listaDellaSpesa[contatore]);
+    contatore++;
 }
