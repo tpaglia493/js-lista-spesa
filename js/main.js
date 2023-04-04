@@ -25,6 +25,7 @@ for (let i = 0; i < listaDellaSpesa.length; i++) {
 };
 
 //STAMPA A SCHERMO E CONSOLE CON CICLO WHILE
+/*
 console.log("STAMPA A CONSOLE CON CICLO WHILE")
 let contatore = 0;
 while (contatore < listaDellaSpesa.length) {
@@ -32,6 +33,7 @@ while (contatore < listaDellaSpesa.length) {
     document.getElementById("lista-della-spesa-displayed").innerHTML += `<li>${listaDellaSpesa[contatore]} </li>`;
     contatore++;
 };
+*/
 
 //AGGIUNTA DEL VALORE DELL'INPUT UTENTE NELL'ARRAY listaDellaSpesa
 
@@ -49,6 +51,10 @@ function aggiungiAllaLista() {
 
     //controllo che l'array abbia il nuovo elemento
     console.log(listaDellaSpesa);
+
+    //STAMPA A SCHERMO DELL'ELEMENTO (LUNGHEZZA meno 1) DELL'ARRAY
+    document.getElementById("lista-della-spesa-displayed").innerHTML += `<li>${listaDellaSpesa[(listaDellaSpesa.length - 1)]} </li>`;
+
 };
 
 //COLLEGAMENTO DEL BOTTONE ALLA FUNZIONE TRAMITE addEventListener("click", funzione)
