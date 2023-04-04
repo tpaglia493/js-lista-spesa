@@ -14,7 +14,7 @@
 //l’elemento corrispondente viene rimosso dalla lista.
 `backticks`
 
-//DEFINIZIONE ARRAY
+//DEFINIZIONE DELL'ARRAY
 let listaDellaSpesa = ["farina", "uova", "latte", "zucchero", "burro",];
 
 //STAMPA A SCHERMO E CONSOLE CON CICLO FOR
@@ -35,20 +35,23 @@ while (contatore < listaDellaSpesa.length) {
 
 //AGGIUNTA DEL VALORE DELL'INPUT UTENTE NELL'ARRAY listaDellaSpesa
 
-    //TO-FIX ESTRAZIONE VALORE DALL'INPUT UTENTE E SALVATAGGIO IN UNA VARIABILE
-let inputDaAggiungereAllaLista = document.getElementById("elemento-da-aggiungere").value;
-//controllo se ha salvato il valore nella variabile
-console.log(inputDaAggiungereAllaLista)
-
     //DEFINIZIONE DELLA FUNZIONE PER AGGIUNGERE IL VALORE ALLA LISTA SE IL BOTTONE VIENE CLICKATO
 function aggiungiAllaLista() {
+
+    //ESTRAZIONE VALORE DALL'INPUT UTENTE E SALVATAGGIO IN UNA VARIABILE
+    let inputDaAggiungereAllaLista = document.getElementById("elemento-da-aggiungere").value;
+
+    //controllo se ha salvato il valore nella variabile
+    console.log(inputDaAggiungereAllaLista)
+
+    //AGGIUNTA DEL VALORE DELL'INPUT UTENTE NELL'ARRAY listaDellaSpesa
     listaDellaSpesa.push(inputDaAggiungereAllaLista);
-    
+
     //controllo che l'array abbia il nuovo elemento
-console.log(listaDellaSpesa);
+    console.log(listaDellaSpesa);
 };
 
-    //COLLEGAMENTO DEL BOTTONE ALLA FUNZIONE TRAMITE addEventListener("click", funzione)
+//COLLEGAMENTO DEL BOTTONE ALLA FUNZIONE TRAMITE addEventListener("click", funzione)
 document.getElementById("bottone-aggiungi-alla-lista").addEventListener("click", aggiungiAllaLista);
 
 
